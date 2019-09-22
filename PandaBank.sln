@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28714.193
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaBank.Server", "PandaBank.Server\PandaBank.Server.csproj", "{6970B4E2-CDC8-45DE-BB9E-C05535A25BD3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaBank.Service", "PandaBank.Service\PandaBank.Service.csproj", "{1B7387F8-D43C-471D-B8B4-470ADD2E609D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaBank.DAL", "PandaBank.DAL\PandaBank.DAL.csproj", "{63D90DB7-AB63-49C4-997E-A029A2BFB59A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaBank.UnitTest", "PandaBank.UnitTest\PandaBank.UnitTest.csproj", "{EEB67573-DD89-4375-B342-07ACA6B0C839}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PandaBankAccount", "PandaBankAccount", "{C12D02F8-B87E-4902-926C-215D94E404C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PandaBankUser", "PandaBankUser", "{22D62CE3-F75D-4D04-B748-BC3465C950B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaBank.User", "PandaBankUser\PandaBank.User\PandaBank.User.csproj", "{5358E480-C049-4B20-870D-9573048285EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaBank.SharedService", "PandaBank.SharedService\PandaBank.SharedService.csproj", "{07BE70FF-124F-459E-A0CB-7DE362BE6B58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaBank.User.DAL", "PandaBankUser\PandaBank.User.DAL\PandaBank.User.DAL.csproj", "{7824A7C4-46F6-4859-B945-A2869D5D3E86}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaBank.User.Service", "PandaBankUser\PandaBank.User.Service\PandaBank.User.Service.csproj", "{19AF2580-D87B-424B-BAB6-66F01522C4A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaBank.Account.Service", "PandaBankAccount\PandaBank.Account.Service\PandaBank.Account.Service.csproj", "{6963FBA6-7C99-46C5-A7A4-6B5A850A0EAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PandaBank.Account.DAL", "PandaBankAccount\PandaBank.Account.DAL\PandaBank.Account.DAL.csproj", "{2EEF1722-FDBC-4611-8A98-38D72016CFEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PandaBank.Account", "PandaBankAccount\PandaBank.Account\PandaBank.Account.csproj", "{DFAE5519-3D17-44E2-83AA-667DDB908CFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6970B4E2-CDC8-45DE-BB9E-C05535A25BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6970B4E2-CDC8-45DE-BB9E-C05535A25BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6970B4E2-CDC8-45DE-BB9E-C05535A25BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6970B4E2-CDC8-45DE-BB9E-C05535A25BD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7387F8-D43C-471D-B8B4-470ADD2E609D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7387F8-D43C-471D-B8B4-470ADD2E609D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7387F8-D43C-471D-B8B4-470ADD2E609D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7387F8-D43C-471D-B8B4-470ADD2E609D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D90DB7-AB63-49C4-997E-A029A2BFB59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D90DB7-AB63-49C4-997E-A029A2BFB59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D90DB7-AB63-49C4-997E-A029A2BFB59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D90DB7-AB63-49C4-997E-A029A2BFB59A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB67573-DD89-4375-B342-07ACA6B0C839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB67573-DD89-4375-B342-07ACA6B0C839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB67573-DD89-4375-B342-07ACA6B0C839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB67573-DD89-4375-B342-07ACA6B0C839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5358E480-C049-4B20-870D-9573048285EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5358E480-C049-4B20-870D-9573048285EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5358E480-C049-4B20-870D-9573048285EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5358E480-C049-4B20-870D-9573048285EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07BE70FF-124F-459E-A0CB-7DE362BE6B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BE70FF-124F-459E-A0CB-7DE362BE6B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BE70FF-124F-459E-A0CB-7DE362BE6B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BE70FF-124F-459E-A0CB-7DE362BE6B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7824A7C4-46F6-4859-B945-A2869D5D3E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7824A7C4-46F6-4859-B945-A2869D5D3E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7824A7C4-46F6-4859-B945-A2869D5D3E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7824A7C4-46F6-4859-B945-A2869D5D3E86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19AF2580-D87B-424B-BAB6-66F01522C4A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19AF2580-D87B-424B-BAB6-66F01522C4A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19AF2580-D87B-424B-BAB6-66F01522C4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19AF2580-D87B-424B-BAB6-66F01522C4A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6963FBA6-7C99-46C5-A7A4-6B5A850A0EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6963FBA6-7C99-46C5-A7A4-6B5A850A0EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6963FBA6-7C99-46C5-A7A4-6B5A850A0EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6963FBA6-7C99-46C5-A7A4-6B5A850A0EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EEF1722-FDBC-4611-8A98-38D72016CFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EEF1722-FDBC-4611-8A98-38D72016CFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EEF1722-FDBC-4611-8A98-38D72016CFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EEF1722-FDBC-4611-8A98-38D72016CFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFAE5519-3D17-44E2-83AA-667DDB908CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFAE5519-3D17-44E2-83AA-667DDB908CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFAE5519-3D17-44E2-83AA-667DDB908CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFAE5519-3D17-44E2-83AA-667DDB908CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5358E480-C049-4B20-870D-9573048285EF} = {22D62CE3-F75D-4D04-B748-BC3465C950B0}
+		{7824A7C4-46F6-4859-B945-A2869D5D3E86} = {22D62CE3-F75D-4D04-B748-BC3465C950B0}
+		{19AF2580-D87B-424B-BAB6-66F01522C4A4} = {22D62CE3-F75D-4D04-B748-BC3465C950B0}
+		{6963FBA6-7C99-46C5-A7A4-6B5A850A0EAD} = {C12D02F8-B87E-4902-926C-215D94E404C6}
+		{2EEF1722-FDBC-4611-8A98-38D72016CFEF} = {C12D02F8-B87E-4902-926C-215D94E404C6}
+		{DFAE5519-3D17-44E2-83AA-667DDB908CFC} = {C12D02F8-B87E-4902-926C-215D94E404C6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD5B8567-9203-4C36-A8CD-A0FC8485DE2E}
+	EndGlobalSection
+EndGlobal

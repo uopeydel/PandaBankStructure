@@ -1,0 +1,672 @@
+{
+	"info": {
+		"_postman_id": "e2562858-2ca1-4a4b-bbc6-825fac12b39f",
+		"name": "PandaBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test Value",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Panda",
+						"value": "PandaBankServerSecureKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/values",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"values"
+					]
+				},
+				"description": "Test Value"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Panda",
+						"value": "PandaBankServerSecureKey",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"testfirstname\",\n    \"lastName\": \"testlastname\",\n    \"email\": \"test@test.test\",\n    \"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Panda",
+						"type": "text",
+						"value": "PandaBankServerSecureKey"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"testfirstname\",\n    \"lastName\": \"testlastname\",\n    \"email\": \"test@test.test\",\n    \"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/User/Token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"User",
+						"Token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjVkYzlhYzcxLWY5OTgtNDU0Zi05YzI1LWE4N2U2NTM4MTRiZSIsImV4cCI6MTU2OTE1MDE2MiwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.IP0ShVCEQ1vAYkSv_WTXEfnbHpjfy2Z47HlRvhElSFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Panda",
+						"type": "text",
+						"value": "PandaBankServerSecureKey"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjVhMDdkN2VjLWVmMjctNGYwMi05ZDk1LTlhM2VlM2IwMGE0ZiIsImV4cCI6MTU2OTE1MjcyNCwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.U9u0XwTp1lWgI3mmqcHA8lwd7CAALN74BpWd0s9kYBQ\",\n        \"refreshToken\": \"1vW/KDjELe5Ri1Fm4EOACR6qxH5O3lPV8xOkzMe2h0k=\"\n    }"
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/User/refresh",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"User",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjhkNTYzODU0LTJiZWUtNGYyNi1iMDUyLWE4MjA0YmY5NThkZiIsImV4cCI6MTU2OTE1MjgzOSwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.wJ6RXhuTk3oWeZZ7LGI9YqSBBRgz6EvJzpVhDqYUnD0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Panda",
+						"type": "text",
+						"value": "PandaBankServerSecureKey"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/User/Me",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"User",
+						"Me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjIwYzZjN2I2LTQ0ZGUtNGNhMy04ZjBkLTAzNTJmNDc3NDBiNSIsImV4cCI6MTU2OTE0NjQzMiwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.Ac6ShLpGI58g0DgLXX1OyRk2tfchi9VOXmS6Ry1YlGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Panda",
+						"type": "text",
+						"value": "PandaBankServerSecureKey"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/User/all",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"User",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Bank Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjIwYzZjN2I2LTQ0ZGUtNGNhMy04ZjBkLTAzNTJmNDc3NDBiNSIsImV4cCI6MTU2OTE0NjQzMiwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.Ac6ShLpGI58g0DgLXX1OyRk2tfchi9VOXmS6Ry1YlGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Panda",
+						"value": "PandaBankServerSecureKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Account Name Test\",\n    \"description\": \"desc of account\",\n    \"pandaStatement\": [\n        { \n            \"balances\": 100,\n            \"status\": \"Deposit\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/Account",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"Account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjhkNTdhN2VjLTIwNGEtNGVjOC1iZjcxLWQ4OTMxZGNkOTQ4NSIsImV4cCI6MTU2OTE1MDQxNCwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.NUKcZUswceQj2e0QezT_JVxSpHzwzrjD1ef3CGSGEWM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Panda",
+						"value": "PandaBankServerSecureKey",
+						"equals": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"pandaAccountId\": \"f09da667-1cf2-49be-910d-60f171ce0ff6\",\n        \"balances\": 1,\n        \"status\": \"Deposit\"\n    }"
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/Account/Deposit?",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"Account",
+						"Deposit"
+					],
+					"query": [
+						{
+							"key": "Panda",
+							"value": "PandaBankServerSecureKey",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Witdraw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjhkNTdhN2VjLTIwNGEtNGVjOC1iZjcxLWQ4OTMxZGNkOTQ4NSIsImV4cCI6MTU2OTE1MDQxNCwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.NUKcZUswceQj2e0QezT_JVxSpHzwzrjD1ef3CGSGEWM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Panda",
+						"value": "PandaBankServerSecureKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pandaAccountId\": \"f09da667-1cf2-49be-910d-60f171ce0ff6\",\n    \"balances\": -10,\n    \"status\": \"Witdraw\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/Account/Witdraw?",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"Account",
+						"Witdraw"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "PandaBankServerSecureKey",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjhkNTdhN2VjLTIwNGEtNGVjOC1iZjcxLWQ4OTMxZGNkOTQ4NSIsImV4cCI6MTU2OTE1MDQxNCwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.NUKcZUswceQj2e0QezT_JVxSpHzwzrjD1ef3CGSGEWM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Panda",
+						"value": "PandaBankServerSecureKey",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/Account/f09da667-1cf2-49be-910d-60f171ce0ff6?",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"Account",
+						"f09da667-1cf2-49be-910d-60f171ce0ff6"
+					],
+					"query": [
+						{
+							"key": "Panda",
+							"value": "PandaBankServerSecureKey",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllAccount",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjhkNTdhN2VjLTIwNGEtNGVjOC1iZjcxLWQ4OTMxZGNkOTQ4NSIsImV4cCI6MTU2OTE1MDQxNCwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.NUKcZUswceQj2e0QezT_JVxSpHzwzrjD1ef3CGSGEWM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Panda",
+						"value": "PandaBankServerSecureKey",
+						"type": "text"
+					},
+					{
+						"key": "https:localhost:44323/api/Account/",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "https://localhost:44323/api/Account/",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/Account/All",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"Account",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My Account StateMent By Account Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjhkNTdhN2VjLTIwNGEtNGVjOC1iZjcxLWQ4OTMxZGNkOTQ4NSIsImV4cCI6MTU2OTE1MDQxNCwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.NUKcZUswceQj2e0QezT_JVxSpHzwzrjD1ef3CGSGEWM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Panda",
+						"type": "text",
+						"value": "PandaBankServerSecureKey"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/Account/Me/f09da667-1cf2-49be-910d-60f171ce0ff6/Statement",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"Account",
+						"Me",
+						"f09da667-1cf2-49be-910d-60f171ce0ff6",
+						"Statement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjhkNTdhN2VjLTIwNGEtNGVjOC1iZjcxLWQ4OTMxZGNkOTQ4NSIsImV4cCI6MTU2OTE1MDQxNCwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.NUKcZUswceQj2e0QezT_JVxSpHzwzrjD1ef3CGSGEWM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Panda",
+						"value": "PandaBankServerSecureKey",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/Account/Me",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"Account",
+						"Me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsImp0aSI6IjhkNTYzODU0LTJiZWUtNGYyNi1iMDUyLWE4MjA0YmY5NThkZiIsImV4cCI6MTU2OTE1MjgzOSwiaXNzIjoiUGFuZGFCYW5rSXNzdWVyIiwiYXVkIjoiUGFuZGFCYW5rQXVkaWVuY2UifQ.wJ6RXhuTk3oWeZZ7LGI9YqSBBRgz6EvJzpVhDqYUnD0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Panda",
+						"type": "text",
+						"value": "PandaBankServerSecureKey"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/User/Logout",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"User",
+						"Logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

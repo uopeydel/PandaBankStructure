@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Server\**" />
+    <Compile Remove="SharedService\Extensions\**" />
+    <EmbeddedResource Remove="Server\**" />
+    <EmbeddedResource Remove="SharedService\Extensions\**" />
+    <None Remove="Server\**" />
+    <None Remove="SharedService\Extensions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.0-preview-20181205-02" />
+    <PackageReference Include="Moq" Version="4.13.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PandaBank.Server\PandaBank.Server.csproj" />
+    <ProjectReference Include="..\PandaBankAccount\PandaBank.Account\PandaBank.Account.csproj" />
+    <ProjectReference Include="..\PandaBankUser\PandaBank.User\PandaBank.User.csproj" />
+  </ItemGroup>
+
+</Project>
